@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flicker.jerryz.com.cn/sitemap.xml

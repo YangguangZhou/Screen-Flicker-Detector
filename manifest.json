@@ -1,0 +1,16 @@
+{
+  "name": "光源频闪检测仪",
+  "short_name": "频闪检测",
+  "description": "基于手机摄像头的本地光源频闪检测工具，守护用眼健康。",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%236366f1' rx='100'/%3E%3Cpath fill='%23fff' d='M256 120c-75 0-141.5 42-171.7 104.9-3.9 8.2-3.9 17.8 0 26.2 30.2 62.9 96.6 104.9 171.7 104.9s141.5-42 171.7-104.9c3.9-8.2 3.9-17.8 0-26.2-30.2-62.9-96.6-104.9-171.7-104.9zm0 188c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64z'/%3E%3Ccircle cx='256' cy='244' r='32' fill='%236366f1'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
