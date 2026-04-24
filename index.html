@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>光源频闪检测仪 - 手机在线护眼检测工具</title>
     <meta name="description" content="光源频闪检测仪是一款基于手机摄像头的在线本地测试工具，利用果冻效应快速检测台灯、屏幕等光源频闪，守护您的用眼健康。无需下载App，纯本地计算，安全隐私。">
     <meta name="keywords" content="频闪检测,护眼台灯,果冻效应检测,光源闪烁,在线工具,频闪测试仪,用眼健康,PWA">
-        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-        <meta name="author" content="Jerry Zhang">
-        <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="Jerry Zhang">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="canonical" href="https://flicker.jerryz.com.cn/">
-        <link rel="alternate" hreflang="zh-CN" href="https://flicker.jerryz.com.cn/">
-        <link rel="alternate" hreflang="x-default" href="https://flicker.jerryz.com.cn/">
+    <link rel="alternate" hreflang="zh-CN" href="https://flicker.jerryz.com.cn/">
+    <link rel="alternate" hreflang="x-default" href="https://flicker.jerryz.com.cn/">
 
-        <meta property="og:type" content="website">
-        <meta property="og:locale" content="zh_CN">
-        <meta property="og:site_name" content="光源频闪检测仪">
-        <meta property="og:title" content="光源频闪检测仪 - 手机在线护眼检测工具">
-        <meta property="og:description" content="基于手机摄像头与果冻效应分析，快速检测台灯与屏幕频闪，输出频率和波动深度，帮助选择更护眼的光源。">
-        <meta property="og:url" content="https://flicker.jerryz.com.cn/">
-        <meta property="og:image" content="https://flicker.jerryz.com.cn/og-image.svg">
-        <meta property="og:image:type" content="image/svg+xml">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="光源频闪检测仪">
+    <meta property="og:title" content="光源频闪检测仪 - 手机在线护眼检测工具">
+    <meta property="og:description" content="基于手机摄像头与果冻效应分析，快速检测台灯与屏幕频闪，输出频率和波动深度，帮助选择更护眼的光源。">
+    <meta property="og:url" content="https://flicker.jerryz.com.cn/">
+    <meta property="og:image" content="https://flicker.jerryz.com.cn/og-image.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="光源频闪检测仪 - 手机在线护眼检测工具">
-        <meta name="twitter:description" content="无需下载 App，手机在线检测频闪风险，支持频率与波动深度分析。">
-        <meta name="twitter:image" content="https://flicker.jerryz.com.cn/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="光源频闪检测仪 - 手机在线护眼检测工具">
+    <meta name="twitter:description" content="无需下载 App，手机在线检测频闪风险，支持频率与波动深度分析。">
+    <meta name="twitter:image" content="https://flicker.jerryz.com.cn/og-image.svg">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="频闪检测">
+    
+    <!-- Umami Analytics -->
+    <script defer src="https://umami.jerryz.com.cn/script.js" data-website-id="f8db6e06-acc0-4c5e-80fa-001f6f13790b"></script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2597042766299857" crossorigin="anonymous"></script>
+
     <link rel="manifest" href="./manifest.json">
-    <link rel="apple-touch-icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"%3E%3Crect width="512" height="512" fill="%236366f1" rx="100"/%3E%3Cpath fill="%23fff" d="M256 120c-75 0-141.5 42-171.7 104.9-3.9 8.2-3.9 17.8 0 26.2 30.2 62.9 96.6 104.9 171.7 104.9s141.5-42 171.7-104.9c3.9-8.2 3.9-17.8 0-26.2-30.2-62.9-96.6-104.9-171.7-104.9zm0 188c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64z"/%3E%3Ccircle cx="256" cy="244" r="32" fill="%236366f1"/%3E%3C/svg%3E'>
+    <link rel="apple-touch-icon"
+        href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"%3E%3Crect width="512" height="512" fill="%236366f1" rx="100"/%3E%3Cpath fill="%23fff" d="M256 120c-75 0-141.5 42-171.7 104.9-3.9 8.2-3.9 17.8 0 26.2 30.2 62.9 96.6 104.9 171.7 104.9s141.5-42 171.7-104.9c3.9-8.2 3.9-17.8 0-26.2-30.2-62.9-96.6-104.9-171.7-104.9zm0 188c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64z"/%3E%3Ccircle cx="256" cy="244" r="32" fill="%236366f1"/%3E%3C/svg%3E'>
     <meta name="theme-color" content="#4f46e5">
-        <meta name="format-detection" content="telephone=no">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <script type="application/ld+json">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@graph": [
@@ -81,19 +89,22 @@
         }
         </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --mesh-color-1: #e0e7ff;
             --mesh-color-2: #f3e8ff;
             --mesh-color-3: #dcfce7;
         }
-        body { 
-            background-color: #f8fafc; 
-            color: #1e293b; 
-            font-family: 'Noto Sans SC', system-ui, -apple-system, sans-serif; 
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            font-family: 'Noto Sans SC', system-ui, -apple-system, sans-serif;
             -webkit-font-smoothing: antialiased;
         }
+
         .glass-panel {
             background: rgba(255, 255, 255, 0.7);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -103,27 +114,41 @@
             border-left-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 8px 32px rgba(31, 38, 135, 0.08);
         }
+
         .graph-container {
             background-image: radial-gradient(rgba(148, 163, 184, 0.15) 1px, transparent 1px);
             background-size: 16px 16px;
             background-color: rgba(255, 255, 255, 0.5);
             background-position: center center;
         }
+
         /* 准星动画 */
         @keyframes pulse-border {
-            0% { border-color: rgba(99, 102, 241, 0.4); }
-            50% { border-color: rgba(99, 102, 241, 0.8); }
-            100% { border-color: rgba(99, 102, 241, 0.4); }
+            0% {
+                border-color: rgba(99, 102, 241, 0.4);
+            }
+
+            50% {
+                border-color: rgba(99, 102, 241, 0.8);
+            }
+
+            100% {
+                border-color: rgba(99, 102, 241, 0.4);
+            }
         }
+
         .scanning-box {
             animation: pulse-border 2s infinite ease-in-out;
         }
-    
+
         .mesh-bg {
             position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             z-index: -1;
-            background: 
+            background:
                 radial-gradient(at 0% 0%, var(--mesh-color-1) 0px, transparent 50%),
                 radial-gradient(at 100% 0%, var(--mesh-color-2) 0px, transparent 50%),
                 radial-gradient(at 100% 100%, var(--mesh-color-3) 0px, transparent 50%);
@@ -133,22 +158,39 @@
         }
 
         @keyframes breathe {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
         }
-        
-        ::-webkit-scrollbar { width: 0px; background: transparent; }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
     </style>
 </head>
+
 <body class="min-h-screen flex flex-col p-4 md:p-8">
     <div class="mesh-bg"></div>
 
     <main class="flex-1 max-w-lg mx-auto w-full flex flex-col gap-6 relative">
-        
+
         <!-- 头部标题 -->
         <header class="text-center pt-8 pb-4 relative z-10">
-            <div class="inline-flex items-center justify-center p-4 mb-5 rounded-[1.5rem] bg-white/70 shadow-sm border border-white/80 ring-1 ring-slate-100/50 backdrop-blur-md">
-                <svg class="w-8 h-8 text-indigo-600 drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            <div
+                class="inline-flex items-center justify-center p-4 mb-5 rounded-[1.5rem] bg-white/70 shadow-sm border border-white/80 ring-1 ring-slate-100/50 backdrop-blur-md">
+                <svg class="w-8 h-8 text-indigo-600 drop-shadow-sm" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
+                </svg>
             </div>
             <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight drop-shadow-sm">光源频闪检测仪</h1>
             <p class="text-sm sm:text-base text-slate-600 mt-3 font-medium tracking-wide">基于果冻效应分析的本地端护眼工具</p>
@@ -156,8 +198,12 @@
 
         <!-- 摄像头预览与控制区 -->
         <div class="glass-panel rounded-[2rem] p-4 shadow-sm flex flex-col gap-4 relative z-10">
-            <div id="instruction" class="bg-indigo-50/80 border border-indigo-100/50 text-indigo-700 text-xs px-4 py-3 rounded-2xl flex items-start gap-3 shadow-sm backdrop-blur-sm">
-                <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <div id="instruction"
+                class="bg-indigo-50/80 border border-indigo-100/50 text-indigo-700 text-xs px-4 py-3 rounded-2xl flex items-start gap-3 shadow-sm backdrop-blur-sm">
+                <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
                 <div class="flex flex-col gap-1">
                     <span class="font-bold">检测指引：</span>
                     <span>1. 请将手机靠近并对准需要检测的光源，或者被其均匀照射的纯白纸张/白墙。</span>
@@ -171,18 +217,28 @@
                 <video id="videoElement" class="hidden" playsinline autoplay muted></video>
                 <!-- 渲染 Canvas -->
                 <canvas id="viewCanvas" class="absolute inset-0 w-full h-full object-cover"></canvas>
-                
+
                 <!-- 准星指示器 -->
                 <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
-                    <div class="w-1/2 h-1/2 border-2 border-dashed scanning-box rounded-lg flex items-center justify-center relative">
-                        <span class="absolute -bottom-6 text-[10px] text-white/70 tracking-widest bg-black/30 px-2 py-0.5 rounded-full">分析区域</span>
+                    <div
+                        class="w-1/2 h-1/2 border-2 border-dashed scanning-box rounded-lg flex items-center justify-center relative">
+                        <span
+                            class="absolute -bottom-6 text-[10px] text-white/70 tracking-widest bg-black/30 px-2 py-0.5 rounded-full">分析区域</span>
                     </div>
                 </div>
 
                 <!-- 启动遮罩 -->
-                <div id="startOverlay" class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm flex flex-col items-center justify-center z-20">
-                    <button id="startBtn" class="px-8 py-3.5 bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 active:scale-95 text-white rounded-full font-medium transition-all shadow-xl hover:shadow-indigo-500/30 flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <div id="startOverlay"
+                    class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm flex flex-col items-center justify-center z-20">
+                    <button id="startBtn"
+                        class="px-8 py-3.5 bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 active:scale-95 text-white rounded-full font-medium transition-all shadow-xl hover:shadow-indigo-500/30 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
                         允许调用摄像头
                     </button>
                     <p class="text-[10px] text-slate-400 mt-4 max-w-[80%] text-center">所有运算均在本地设备完成，不会上传任何画面，请放心使用。</p>
@@ -196,28 +252,43 @@
                     <span id="statusText" class="text-xs font-medium text-slate-500">待机中</span>
                 </div>
                 <div class="flex gap-2">
-                    <button id="switchBtn" class="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition hidden" title="切换镜头">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    <button id="switchBtn" class="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition hidden"
+                        title="切换镜头">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                            </path>
+                        </svg>
                     </button>
-                    <button id="stopBtn" class="p-2 text-red-500 hover:bg-red-50 rounded-full transition hidden" title="停止">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"></path></svg>
+                    <button id="stopBtn" class="p-2 text-red-500 hover:bg-red-50 rounded-full transition hidden"
+                        title="停止">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
             <div id="errorMsg" class="text-red-500 text-xs bg-red-50 p-2 rounded-lg hidden"></div>
         </div>
 
-    <!-- 结果解读卡片 (平易近人的建议) -->
+        <!-- 结果解读卡片 (平易近人的建议) -->
         <div class="glass-panel rounded-[2rem] p-5 shadow-sm">
             <h2 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2 justify-between">
                 <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
                     综合分析与建议
                 </div>
             </h2>
-            
+
             <div class="flex items-start gap-4 mb-4">
-                <div id="gradeBadge" class="shrink-0 w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-xl font-bold text-slate-400 transition-colors">
+                <div id="gradeBadge"
+                    class="shrink-0 w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-xl font-bold text-slate-400 transition-colors">
                     -
                 </div>
                 <div class="flex-1">
@@ -229,16 +300,19 @@
             <div class="grid grid-cols-2 gap-3 mb-4">
                 <div class="bg-indigo-50/50 p-3 rounded-xl border border-indigo-100/50">
                     <p class="text-[10px] text-slate-500 mb-1">估算频闪频率</p>
-                    <p id="freqEst" class="text-lg font-bold text-indigo-600 font-mono">-- <span class="text-xs font-normal text-indigo-400">Hz</span></p>
+                    <p id="freqEst" class="text-lg font-bold text-indigo-600 font-mono">-- <span
+                            class="text-xs font-normal text-indigo-400">Hz</span></p>
                 </div>
                 <div class="bg-amber-50/50 p-3 rounded-xl border border-amber-100/50">
                     <p class="text-[10px] text-slate-500 mb-1">波动深度 (Modulation)</p>
-                    <p id="depthEst" class="text-lg font-bold text-amber-600 font-mono">-- <span class="text-xs font-normal text-amber-400">%</span></p>
+                    <p id="depthEst" class="text-lg font-bold text-amber-600 font-mono">-- <span
+                            class="text-xs font-normal text-amber-400">%</span></p>
                 </div>
             </div>
 
             <div class="bg-slate-50 rounded-xl p-3 text-xs text-slate-600 border border-slate-100">
-                <span class="font-semibold text-slate-700">💡 用眼贴士：</span>肉眼通常无法察觉 80Hz 以上的频闪。但长期在这种光源下阅读极易引起视觉疲劳。健康的阅读光源应当是“无可视频闪”的（波动深度小于 3% 为佳）。
+                <span class="font-semibold text-slate-700">💡 用眼贴士：</span>肉眼通常无法察觉 80Hz
+                以上的频闪。但长期在这种光源下阅读极易引起视觉疲劳。健康的阅读光源应当是“无可视频闪”的（波动深度小于 3% 为佳）。
             </div>
         </div>
 
@@ -268,7 +342,8 @@
 
             <!-- Install PWA button -->
             <div id="pwaContainer" class="hidden text-center pb-8">
-                <button id="installPwaBtn" class="px-5 py-2 bg-slate-800 text-white text-xs rounded-full font-medium shadow-sm hover:bg-slate-700 transition">
+                <button id="installPwaBtn"
+                    class="px-5 py-2 bg-slate-800 text-white text-xs rounded-full font-medium shadow-sm hover:bg-slate-700 transition">
                     添加到主屏幕 (App)
                 </button>
                 <p class="text-[10px] text-slate-400 mt-2 pwa-manual-guide hidden">点击浏览器分享按钮，选择“添加到主屏幕”</p>
@@ -281,7 +356,7 @@
         const video = document.getElementById('videoElement');
         const viewCanvas = document.getElementById('viewCanvas');
         const viewCtx = viewCanvas.getContext('2d', { willReadFrequently: true });
-        
+
         const spatialCanvas = document.getElementById('spatialCanvas');
         const spatialCtx = spatialCanvas.getContext('2d');
         const temporalCanvas = document.getElementById('temporalCanvas');
@@ -292,7 +367,7 @@
         const switchBtn = document.getElementById('switchBtn');
         const startOverlay = document.getElementById('startOverlay');
         const errorMsg = document.getElementById('errorMsg');
-        
+
         // UI 状态元素
         const statusIndicator = document.getElementById('statusIndicator');
         const statusText = document.getElementById('statusText');
@@ -345,26 +420,26 @@
             pwaContainer.classList.add('hidden');
         } else {
             const isIos = () => {
-              const userAgent = window.navigator.userAgent.toLowerCase();
-              return /iphone|ipad|ipod/.test( userAgent );
+                const userAgent = window.navigator.userAgent.toLowerCase();
+                return /iphone|ipad|ipod/.test(userAgent);
             };
-            if(isIos() && 'standalone' in window.navigator && !window.navigator.standalone) {
+            if (isIos() && 'standalone' in window.navigator && !window.navigator.standalone) {
                 pwaContainer.classList.remove('hidden');
                 pwaManualGuide.classList.remove('hidden');
             }
         }
 
         // 数据缓冲，用于平滑结果
-        const temporalData = new Array(100).fill(0); 
+        const temporalData = new Array(100).fill(0);
         const resultBuffer = []; // 存储最近几帧的判定结果
 
         // 估算传感器读取一行的时间 (毫秒)。各手机不同，这里取个均值用于粗略估算
-        const ASSUMED_READOUT_TIME_MS = 33.3; 
+        const ASSUMED_READOUT_TIME_MS = 33.3;
 
         // 调整 Canvas 内部尺寸以匹配 CSS 显示尺寸 (高分屏适配)
         function resizeCanvas() {
             const dpr = window.devicePixelRatio || 1;
-            
+
             spatialCanvas.width = spatialCanvas.clientWidth * dpr;
             spatialCanvas.height = spatialCanvas.clientHeight * dpr;
             spatialCtx.scale(dpr, dpr);
@@ -384,7 +459,7 @@
                     video: { facingMode: facingMode, width: { ideal: 480 }, height: { ideal: 640 } },
                     audio: false
                 });
-                
+
                 video.srcObject = stream;
                 video.play();
 
@@ -397,10 +472,10 @@
                     stopBtn.classList.remove('hidden');
                     switchBtn.classList.remove('hidden');
                     errorMsg.classList.add('hidden');
-                    
+
                     statusIndicator.className = 'w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse';
                     statusText.textContent = "正在实时分析";
-                    
+
                     if (!isRunning) {
                         isRunning = true;
                         processFrame();
@@ -409,11 +484,11 @@
             } catch (err) {
                 console.error("Camera error:", err);
                 let errText = "相机访问失败。";
-                if(err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError') {
+                if (err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError') {
                     errText = "权限被拒绝：请在浏览器设置中允许此网页访问相机。";
-                } else if(err.name === 'NotFoundError' || err.name === 'DevicesNotFoundError') {
+                } else if (err.name === 'NotFoundError' || err.name === 'DevicesNotFoundError') {
                     errText = "未找到相机设备。";
-                } else if(err.name === 'NotReadableError' || err.name === 'TrackStartError') {
+                } else if (err.name === 'NotReadableError' || err.name === 'TrackStartError') {
                     errText = "相机可能正被其他应用占用，请关闭后重试。";
                 }
                 errorMsg.innerHTML = `<span class="font-bold">⚠️ 提示：</span>${errText} (${err.message})`;
@@ -427,14 +502,14 @@
             if (stream) stream.getTracks().forEach(track => track.stop());
             isRunning = false;
             cancelAnimationFrame(animationId);
-            
+
             startOverlay.classList.remove('hidden');
             stopBtn.classList.add('hidden');
             switchBtn.classList.add('hidden');
-            
+
             statusIndicator.className = 'w-2.5 h-2.5 rounded-full bg-slate-300';
             statusText.textContent = "已暂停";
-            
+
             resetUI();
         }
 
@@ -456,7 +531,7 @@
             const cropH = Math.floor(viewCanvas.height / 2);
             const cropX = Math.floor((viewCanvas.width - cropW) / 2);
             const cropY = Math.floor((viewCanvas.height - cropH) / 2);
-            
+
             if (cropW > 0 && cropH > 0) {
                 const imageData = viewCtx.getImageData(cropX, cropY, cropW, cropH);
                 const data = imageData.data;
@@ -468,7 +543,7 @@
                     let rowSum = 0;
                     for (let x = 0; x < cropW; x++) {
                         const i = (y * cropW + x) * 4;
-                        const lum = 0.299 * data[i] + 0.587 * data[i+1] + 0.114 * data[i+2];
+                        const lum = 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
                         rowSum += lum;
                     }
                     rowLuminance[y] = rowSum / cropW;
@@ -487,11 +562,11 @@
 
         function analyzeData(rowLuminance) {
             const h = rowLuminance.length;
-            
+
             // 高通滤波，去除光照渐变，提取纹理
             const windowSize = Math.max(5, Math.floor(h / 20));
             const detrended = new Float32Array(h);
-            
+
             for (let i = 0; i < h; i++) {
                 let sum = 0, count = 0;
                 let start = Math.max(0, i - windowSize);
@@ -507,20 +582,20 @@
             let crossings = 0;
             let variance = 0;
             const threshold = 0.5; // 忽略极其微小的噪点
-            
+
             let maxLum = rowLuminance[0];
             let minLum = rowLuminance[0];
 
             for (let i = 1; i < h; i++) {
                 variance += Math.abs(detrended[i]);
-                if (detrended[i] > threshold && detrended[i-1] <= threshold) {
+                if (detrended[i] > threshold && detrended[i - 1] <= threshold) {
                     crossings++;
                 }
                 if (rowLuminance[i] > maxLum) maxLum = rowLuminance[i];
                 if (rowLuminance[i] < minLum) minLum = rowLuminance[i];
             }
             variance = variance / h;
-            
+
             // 波动深度 (Modulation Depth) = (Max - Min) / (Max + Min)
             let modDepth = 0;
             if (maxLum + minLum > 0) {
@@ -528,7 +603,7 @@
             }
 
             // 时间占比：我们截取了中间 1/2 的高度
-            const assumedAreaReadTime = ASSUMED_READOUT_TIME_MS * 0.5; 
+            const assumedAreaReadTime = ASSUMED_READOUT_TIME_MS * 0.5;
             let estimatedHz = (crossings / (assumedAreaReadTime / 1000));
 
             // 平滑结果判定
@@ -573,7 +648,7 @@
             updateGradeUI(finalStatus);
 
             let displayDepth = (avgDepth / resultBuffer.length).toFixed(1);
-            if(displayDepth > 0 && finalStatus !== 'IDLE') {
+            if (displayDepth > 0 && finalStatus !== 'IDLE') {
                 depthEst.innerHTML = `${displayDepth} <span class="text-xs font-normal text-amber-400">%</span>`;
             } else {
                 depthEst.innerHTML = `-- <span class="text-xs font-normal text-amber-400">%</span>`;
@@ -592,34 +667,34 @@
 
         function updateGradeUI(status) {
             const uiConf = {
-                IDLE: { 
-                    bg: 'bg-slate-100', color: 'text-slate-400', text: '-', 
+                IDLE: {
+                    bg: 'bg-slate-100', color: 'text-slate-400', text: '-',
                     title: '等待检测...', desc: '请将手机对准光源照射的白纸。'
                 },
-                GOOD: { 
-                    bg: 'bg-emerald-100', color: 'text-emerald-600', text: '优', 
+                GOOD: {
+                    bg: 'bg-emerald-100', color: 'text-emerald-600', text: '优',
                     title: '无明显频闪', desc: '该光源十分稳定，未检测到有害的高频波动。非常适合用于长时间阅读或工作。'
                 },
-                WARNING: { 
-                    bg: 'bg-amber-100', color: 'text-amber-600', text: '良', 
+                WARNING: {
+                    bg: 'bg-amber-100', color: 'text-amber-600', text: '良',
                     title: '轻微波动', desc: '检测到微弱的明暗变化。对于一般使用无大碍，但敏感人群长时间阅读可能引起轻微眼疲劳。'
                 },
-                BAD: { 
-                    bg: 'bg-rose-100', color: 'text-rose-600', text: '差', 
+                BAD: {
+                    bg: 'bg-rose-100', color: 'text-rose-600', text: '差',
                     title: '严重频闪！', desc: '波纹明显。该光源正在高速闪烁，长期在此光线下看书极易导致视觉疲劳、头痛和视力下降，强烈建议更换台灯！'
                 }
             };
 
             const conf = uiConf[status];
-            
+
             // 优化 DOM 操作，仅在状态改变时更新类名
             if (gradeBadge.dataset.status !== status) {
                 gradeBadge.className = `shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-bold transition-colors ${conf.bg} ${conf.color}`;
                 gradeBadge.textContent = conf.text;
                 gradeBadge.dataset.status = status;
-                
+
                 gradeTitle.textContent = conf.title;
-                if(status === 'BAD') {
+                if (status === 'BAD') {
                     gradeTitle.className = "text-sm font-bold text-rose-600";
                 } else {
                     gradeTitle.className = "text-sm font-semibold text-slate-700";
@@ -632,16 +707,16 @@
             const ctx = spatialCtx;
             const w = spatialCanvas.clientWidth;
             const h = spatialCanvas.clientHeight;
-            
+
             ctx.clearRect(0, 0, w, h);
-            
+
             // 绘制中心基准线
             ctx.beginPath();
             ctx.strokeStyle = '#e2e8f0'; // slate-200
             ctx.lineWidth = 1;
             ctx.setLineDash([4, 4]);
-            ctx.moveTo(0, h/2);
-            ctx.lineTo(w, h/2);
+            ctx.moveTo(0, h / 2);
+            ctx.lineTo(w, h / 2);
             ctx.stroke();
             ctx.setLineDash([]);
 
@@ -651,11 +726,11 @@
             ctx.lineJoin = 'round';
 
             // 动态缩放 y 轴
-            const maxVal = Math.max(8, ...data.map(Math.abs)); 
-            
+            const maxVal = Math.max(8, ...data.map(Math.abs));
+
             for (let i = 0; i < data.length; i++) {
                 const x = (i / data.length) * w;
-                const y = h/2 - (data[i] / maxVal) * (h/2) * 0.8;
+                const y = h / 2 - (data[i] / maxVal) * (h / 2) * 0.8;
                 if (i === 0) ctx.moveTo(x, y);
                 else ctx.lineTo(x, y);
             }
@@ -666,7 +741,7 @@
             const ctx = temporalCtx;
             const w = temporalCanvas.clientWidth;
             const h = temporalCanvas.clientHeight;
-            
+
             ctx.clearRect(0, 0, w, h);
             ctx.beginPath();
             ctx.strokeStyle = '#10b981'; // emerald-500
@@ -678,12 +753,12 @@
                 if (v < minVal) minVal = v;
                 if (v > maxVal) maxVal = v;
             });
-            
-            const range = Math.max(3, maxVal - minVal); 
-            
+
+            const range = Math.max(3, maxVal - minVal);
+
             for (let i = 0; i < temporalData.length; i++) {
                 const x = (i / temporalData.length) * w;
-                const y = h - ((temporalData[i] - minVal + range*0.1) / (range * 1.2)) * h;
+                const y = h - ((temporalData[i] - minVal + range * 0.1) / (range * 1.2)) * h;
                 if (i === 0) ctx.moveTo(x, y);
                 else ctx.lineTo(x, y);
             }
@@ -702,5 +777,5 @@
         resizeCanvas();
     </script>
 </body>
-</html>
 
+</html>
